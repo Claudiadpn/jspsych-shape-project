@@ -1,0 +1,111 @@
+# ============================================
+# GITIGNORE - Expérience JsPsych
+# ============================================
+
+# ============================================
+# IDE et Éditeurs
+# ============================================
+.idea/
+.vscode/
+.claude/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ============================================
+# Données expérimentales (générées)
+# ============================================
+# Fichiers CSV des participants
+data/*.csv
+
+# Logs d'IP
+data/ip_log.txt
+
+# IMPORTANT: On garde distribution.json comme fichier de structure
+# mais vous pouvez le commenter si vous voulez l'exclure aussi
+# data/distribution.json
+
+# ============================================
+# Fichiers système
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# Fichiers temporaires et backup
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~.nib
+*.log
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+\#*\#
+.\#*
+
+# ============================================
+# PHP
+# ============================================
+*.log
+error_log
+php_errors.log
+
+# ============================================
+# Node.js (au cas où vous ajouteriez des outils)
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.yarn
+
+# ============================================
+# Environnement et configuration
+# ============================================
+.env
+.env.local
+.env.*.local
+config.local.php
+
+# ============================================
+# Archives et compression
+# ============================================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================
+# Documentation générée (si vous utilisez des outils)
+# ============================================
+docs/_build/
+site/

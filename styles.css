@@ -1,0 +1,449 @@
+/* ============================= */
+/* VARIABLES DE COULEURS ET OMBRES */
+/* ============================= */
+:root {
+    /* Couleurs de fond */
+    --bg-main: #faf7f2;             /* study-invite / instruction highlight */
+    --bg-consent: #f1efe9;          /* consent block */
+    --bg-instructions: #eef3ef;     /* instructions */
+    --bg-rating: #f5f5f7;           /* rating box */
+    --bg-row: #ffffff;              /* ligne individuelle dans rating box */
+
+    /* Couleurs texte */
+    --text-main: #3b3b3b;
+    --text-secondary: #555;
+    --text-sage: #6b8e6e;           /* vert sauge */
+    --text-terracotta: #b56b4a;     /* accent / terracotta */
+    --text-muted: #6b6b6b;
+    --text-button: #ffffff;
+
+    /* Bordures / accents */
+    --border-consent: var(--text-sage);            /* vert sauge */
+    --border-left-instructions: var(--text-terracotta); /* terracotta */
+    --border-dashed: #d6cbbd;
+    --border-average: #ddd;
+
+    /* Couleurs boutons */
+    --button-bg: var(--text-sage);
+    --button-bg-hover: #5f8162;
+
+    /* Couleurs alertes / warning */
+    --warning-bg: #ff9800;
+    --warning-text: #ffffff;
+
+    /* Ombres */
+    --shadow-main: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --shadow-button: 0 6px 14px rgba(0, 0, 0, 0.12);
+    --shadow-button-hover: 0 8px 18px rgba(0, 0, 0, 0.15);
+    --shadow-row: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-row-hover: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-warning: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ============================= */
+/* JSPSYCH CONTENT */
+/* ============================= */
+.jspsych-content { text-align:left; padding: 30px; }
+#jspsych-html-button-response-btngroup, #jspsych-survey-text-form { text-align: center }
+
+.jspsych-display-element input[type="text"] {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 14px;
+    height: 40px;
+    padding:5px;
+    border-radius: 10px;
+    border: var(--text-terracotta) 1px solid;
+    background-color: var(--bg-rating);
+}
+
+/* ============================= */
+/* STUDY INVITE */
+/* ============================= */
+.study-invite {
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    max-width: 720px;
+    margin: 0 auto 10px;
+    padding: 24px 28px;
+    background: var(--bg-main);
+    color: var(--text-main);
+    border-radius: 14px;
+    box-shadow: var(--shadow-main);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.study-invite h1 { font-size: 19px; color: var(--text-sage); margin-bottom: 12px; }
+.study-invite h2 { font-size: 15px; color: var(--text-terracotta); margin: 22px 0 6px; display: flex; gap: 6px; }
+.study-invite p { margin: 6px 0 0 0; }
+.study-invite ul { margin: 6px 0 0 18px; padding: 0; }
+.study-invite li { margin: 4px 0; }
+.study-invite .contact { margin-top: 18px; padding-top: 12px; border-top: 1px dashed var(--border-dashed); }
+
+.study-invite .consent {
+    margin-top: 24px;
+    padding: 16px 18px;
+    background: var(--bg-consent);
+    border-left: 4px solid var(--border-consent);
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+.study-invite .consent p { margin: 0 0 8px 0; }
+.study-invite .consent ul { margin: 6px 0 10px 18px; padding: 0; }
+.study-invite .consent li { margin: 4px 0; }
+.study-invite .consent-note { font-style: italic; color: var(--text-muted); margin-top: 8px; }
+
+/* ============================= */
+/* BOUTON START */
+/* ============================= */
+.start-button {
+    display: block;
+    margin: 24px auto 8px auto;
+    padding: 12px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-button);
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.start-button:hover { background-color: var(--button-bg-hover); transform: translateY(-1px); box-shadow: var(--shadow-button-hover); }
+.start-button:active { transform: translateY(0); box-shadow: var(--shadow-button); }
+.start-button:focus-visible { outline: 3px solid var(--text-terracotta); outline-offset: 3px; }
+
+/* ============================= */
+/* INSTRUCTIONS */
+/* ============================= */
+.instructions {
+    margin-top: 24px;
+    padding: 16px 18px;
+    background: var(--bg-instructions);
+    border-left: 4px solid var(--border-left-instructions);
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+.instructions p { margin: 0 0 10px 0; }
+.instruction-highlight { margin-top: 10px; padding: 10px 12px; background: var(--bg-main); border-radius: 8px;}
+.start-instruction { margin-top: 16px; text-align: left; font-size: 1rem; color: var(--text-sage); letter-spacing: 0.02em; }
+
+/* ============================= */
+/* RATING BOX */
+/* ============================= */
+#rating_box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 250px;
+    max-width: 90%;
+    padding: 15px 20px;
+    background-color: var(--bg-rating);
+    border-radius: 14px;
+    box-shadow: var(--shadow-main);
+    z-index: 9999;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+}
+#rating_box #average_display { font-weight: 700; font-size: 16px; color: var(--text-terracotta); margin-bottom: 12px; text-align: center; border-bottom: 1px solid var(--border-average); padding-bottom: 8px; border-radius: 8px 8px 0 0; }
+#rating_box div:not(#average_display) { display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-row); padding: 8px 12px; border-radius: 10px; margin-bottom: 8px; box-shadow: var(--shadow-row); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+#rating_box div:not(#average_display):hover { transform: translateY(-1px); box-shadow: var(--shadow-row-hover); }
+#rating_box span:first-child { font-weight: 500; color: var(--text-secondary); }
+#rating_box span[id^="score_"] { font-weight: 700; color: var(--text-terracotta); }
+
+/* ============================= */
+/* TIMEOUT WARNING */
+/* ============================= */
+#timeout_warning {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-terracotta); /* harmonisation warning avec accent */
+    color: var(--text-button);
+    padding: 15px 30px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-warning);
+    z-index: 9999;
+    font-weight: bold;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    animation: fadeIn 0.3s ease-in;
+    text-align: center;
+}
+
+/* Animation apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ============================= */
+/* GROUP SELECTION SCREEN */
+/* ============================= */
+.group-selection-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.group-selection-title {
+    color: var(--text-sage);
+    margin-bottom: 20px;
+}
+
+.group-selection-text {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+#names-list {
+    background: var(--bg-main);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#names-list p {
+    color: #888;
+    font-style: italic;
+}
+
+.participant-name {
+    background: var(--bg-row);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-row);
+    animation: slideIn 0.3s ease-out;
+    font-weight: 500;
+    color: var(--text-main);
+    width: 200px;
+}
+
+.participant-name .status {
+    color: var(--text-sage);
+    font-size: 0.9em;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ready-button {
+    font-size: 1.1em;
+    padding: 12px 30px;
+    background: var(--button-bg);
+    color: var(--text-button);
+    border: none;
+    border-radius: 8px;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.ready-button:not(:disabled) {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.ready-button:not(:disabled):hover {
+    background: var(--button-bg-hover);
+    transform: translateY(-1px);
+}
+
+/* ============================= */
+/* CONNECTION LOADER */
+/* ============================= */
+.connection-loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.connection-loader-content {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--text-sage);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.connection-loader-content h3 {
+    margin: 0 0 10px 0;
+    color: var(--text-main);
+}
+
+.connection-loader-content p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* ============================= */
+/* WAITING LOADER (questions) */
+/* ============================= */
+#waiting_loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.waiting-loader-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.waiting-loader-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.waiting-loader-box h3 {
+    margin: 0 0 10px 0;
+    color: var(--text-main);
+}
+
+.waiting-loader-box p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* ============================= */
+/* NICKNAME INPUT */
+/* ============================= */
+.nickname-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.nickname-title {
+    color: var(--text-sage);
+    margin-bottom: 20px;
+}
+
+.nickname-text {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.nickname-note {
+    font-size: 0.95em;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* QUIT BUTTON */
+/* ============================= */
+.quit-button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99999;
+}
+
+#quit-button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99999;
+}
+
+.quit-button {
+    padding: 10px 20px;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--text-button);
+    background-color: var(--text-terracotta);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.quit-button:hover {
+    background-color: #a45a3a;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+.quit-button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-button);
+}
+
+/* ============================= */
+/* QUESTIONS (SURVEY) */
+/* ============================= */
+/* Rendre toutes les questions en gras et plus grandes */
+.jspsych-survey-likert-statement,
+.jspsych-survey-multi-choice-question,
+.jspsych-survey-text-question {
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+/* Les prompts numérotés des questions */
+.jspsych-survey-likert-statement {
+    font-weight: 600;
+    font-size: 1.08em;
+    line-height: 1.5;
+}
