@@ -8,7 +8,7 @@ Expérience en psychologie sociale étudiant l'adhésion aux affirmations pseudo
 1. L'expérience commence par l'écran de consentement
 2. Le participant doit être en licence (L1, L2, ou L3)
 3. Attribution automatique de la condition (group/solo) selon l'équilibrage
-4. L'expérience dure environ **10-15 minutes**
+4. L'expérience dure environ **8 à 12 minutes**
 
 ---
 

@@ -457,8 +457,9 @@ export function createFinalQuestionnaire() {
                 </ul>
                 <p>vous pouvez contacter :<br>
                 <strong>Responsable de l'étude :</strong><br>
-                [Nom – Statut – Université]<br>
-                Email : [adresse]</p>
+                            Madeline Desmurs et Claudia Dapino Ponel<br>
+            Email : contact@psychofact.fr<br>
+              </p>
 
                 <h2>Remerciements</h2>
                 <p>Nous vous remercions chaleureusement pour le temps accordé à cette étude.<br>

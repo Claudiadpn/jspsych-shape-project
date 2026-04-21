@@ -109,13 +109,19 @@ export function createQuestionTrials(questions, selectedNames) {
                 // Délai de 1,5s avant de commencer l'affichage des scores
                 // (pour simuler un temps de "réflexion" des autres)
                 setTimeout(() => {
-                    const totalWindow = 12000; // Fenêtre de 12 secondes pour tous les scores
+                    const totalWindow = 7000; // Fenêtre de 7 secondes pour tous les scores
+
+                    // Délais triés pour garantir une répartition régulière sur la fenêtre.
+                    // Les noms sont mélangés séparément pour que l'ordre d'apparition
+                    // soit aléatoire à chaque question.
+                    const sortedDelays = selectedNames
+                        .map(() => Math.random() * totalWindow)
+                        .sort((a, b) => a - b);
+                    const shuffledNames = [...selectedNames].sort(() => Math.random() - 0.5);
 
                     // Pour chaque "participant simulé"
-                    selectedNames.forEach(name => {
-                        // Génération d'un délai aléatoire entre 0 et 12 secondes
-                        // Simule des temps de réponse variables entre participants
-                        const randomDelay = Math.random() * totalWindow;
+                    shuffledNames.forEach((name, i) => {
+                        const randomDelay = sortedDelays[i];
 
                         setTimeout(() => {
                             // ============================================
@@ -157,7 +163,7 @@ export function createQuestionTrials(questions, selectedNames) {
                             ratingState.currentAverage = avg;
                         }, randomDelay);
                     });
-                }, 1500); // Fin du setTimeout initial
+                }, 800); // Fin du setTimeout initial
                 } // Fin du if (condition === "group")
 
                 // ============================================

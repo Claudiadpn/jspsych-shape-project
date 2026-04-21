@@ -38,8 +38,13 @@ export const createOtherUsersBloc = (names) => {
         box.appendChild(line);
     });
 
-    // Ajout du bloc au DOM
-    document.body.appendChild(box);
+    // Insertion du bloc avant le bouton "Valider" dans le formulaire Likert
+    const nextBtn = document.querySelector('.jspsych-survey-likert-next');
+    if (nextBtn) {
+        nextBtn.parentNode.insertBefore(box, nextBtn);
+    } else {
+        document.body.appendChild(box);
+    }
 }
 
 /**
@@ -56,7 +61,6 @@ export const closeOtherUsersBloc = () => {
  */
 export const loadNames = () => {
     return [
-        // Accents présents (18)
         "Léna",
         "Chloé",
         "Anaïs",
@@ -75,45 +79,42 @@ export const loadNames = () => {
         "Aurélie",
         "Léonie",
         "Clément",
-        // Sans accents (12)
-        "Lena",
-        "Chloe",
-        "Anais",
-        "Emilie",
-        "Ines",
-        "Theo",
-        "Noemie",
-        "Maeva",
-        "Loic",
-        "Gaetan",
-        "Helene",
-        "Aurelie",
-        // Prénoms simples (8)
+        "Manon",
+        "Laura",
+        "Julie",
+        "Pauline",
+        "Nina",
+        "Maxime",
+        "Alexandre",
+        "Quentin",
+        "Baptiste",
+        "Romain",
+        "Vincent",
+        "Thomas",
         "Marie",
         "Camille",
         "Sarah",
         "Sophie",
-        "Lucas",
         "Hugo",
         "Arthur",
         "Julien",
-        // Numériques / stylisés réalistes (4)
-        "Lena_98",
-        "Theo_2001",
-        "Lucas_31",
-        "Ines_03",
+        "Nathan",
+        "Enzo92",
+        "Mathis2000",
+        "Clara75",
+        "Yanis13",
     ];
 };
 
 export const loadSpecificsNames = () => {
     return [
-        "lUcAs",       // casse mixte
-        "marie75",    // minuscule + chiffres
-        "Chloee",      // double lettre
-        "Theo-B",      // tiret + initiale
-        "SarahK",      // initiale collée
-        "Nico",       // underscore final
-        "Hugoo",       // double voyelle
-        "Lenna"        // double lettre
+        "maXime",     // casse mixte
+        "julie92",    // minuscule + chiffres
+        "Laurraa",    // double lettre
+        "Alex-T",     // tiret + initiale
+        "NinaM",      // initiale collée
+        "Tom_",       // underscore final
+        "Mathiss",    // double consonne
+        "Eliott"      // double lettre
     ];
 };

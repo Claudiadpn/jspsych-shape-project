@@ -16,10 +16,10 @@ export const nicknameInput = {
     preamble: `
         <div class="nickname-container">
             <h2 class="nickname-title">
-                Choisissez un pseudo d'étude
+                Choisissez un pseudo ou prénom d'étude
             </h2>
             <p class="nickname-note">
-                <em>N'indiquez pas votre vrai prénom. Ce pseudo sert uniquement à l'affichage pendant la tâche. Celui-ci ne sera pas conservé, ni lié à vos réponses.</em>
+                <em>Ce pseudo sert uniquement à l'affichage pendant la tâche. Celui-ci ne sera pas conservé, ni lié à vos réponses.</em>
             </p>
         </div>
     `,

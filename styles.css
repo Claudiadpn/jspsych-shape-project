@@ -132,27 +132,24 @@
 /* RATING BOX */
 /* ============================= */
 #rating_box {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 250px;
+    width: 460px;
     max-width: 90%;
-    padding: 15px 20px;
+    margin: 24px auto 8px auto;
+    padding: 18px 28px;
     background-color: var(--bg-rating);
     border-radius: 14px;
     box-shadow: var(--shadow-main);
-    z-index: 9999;
     font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-main);
     display: flex;
     flex-direction: column;
 }
-#rating_box #average_display { font-weight: 700; font-size: 16px; color: var(--text-terracotta); margin-bottom: 12px; text-align: center; border-bottom: 1px solid var(--border-average); padding-bottom: 8px; border-radius: 8px 8px 0 0; }
-#rating_box div:not(#average_display) { display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-row); padding: 8px 12px; border-radius: 10px; margin-bottom: 8px; box-shadow: var(--shadow-row); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+#rating_box #average_display { font-weight: 700; font-size: 18px; color: var(--text-terracotta); margin-bottom: 14px; text-align: center; border-bottom: 1px solid var(--border-average); padding-bottom: 10px; border-radius: 8px 8px 0 0; }
+#rating_box div:not(#average_display) { display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-row); padding: 10px 16px; border-radius: 10px; margin-bottom: 8px; box-shadow: var(--shadow-row); transition: transform 0.15s ease, box-shadow 0.15s ease; }
 #rating_box div:not(#average_display):hover { transform: translateY(-1px); box-shadow: var(--shadow-row-hover); }
 #rating_box span:first-child { font-weight: 500; color: var(--text-secondary); }
-#rating_box span[id^="score_"] { font-weight: 700; color: var(--text-terracotta); }
+#rating_box span[id^="score_"] { font-weight: 700; font-size: 18px; color: var(--text-terracotta); }
 
 /* ============================= */
 /* TIMEOUT WARNING */

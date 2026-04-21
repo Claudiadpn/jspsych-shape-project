@@ -186,7 +186,6 @@ Le participant pense être connecté à d'autres participants et voit leurs rép
 | `condition` | Condition expérimentale | "group" ou "solo" |
 | `age` | Âge du participant | 20 |
 | `genre` | Genre | "Femme", "Homme", "Indéfini" |
-| `nickname` | Pseudo (demandé à tous, non sauvegardé) | "Alice" |
 
 ### Données par question (questions Likert principales)
 
@@ -302,7 +301,7 @@ votreprojet/
 screens/
 ├── consentement.js           # Écran de consentement
 ├── study-level.js            # Vérification niveau + attribution condition
-├── nickname-input.js         # Saisie pseudo (group uniquement)
+├── nickname-input.js         # Saisie pseudo (tous les participants)
 ├── explanations.js           # Explications de l'étude
 ├── group-selection.js        # Formation groupe / écran démarrage
 ├── connection-loader.js      # Loader de connexion (3s)
