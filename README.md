@@ -3,6 +3,8 @@
 Expérience en psychologie sociale étudiant l'adhésion aux affirmations pseudo-scientifiques et l'effet de l'influence sociale sur les jugements individuels.
 
 
+> ⚠️ **Cette expérience est conçue pour être réalisée sur ordinateur.** Elle n'est pas compatible avec les smartphones ou tablettes.
+
 ### Première utilisation
 
 1. L'expérience commence par l'écran de consentement

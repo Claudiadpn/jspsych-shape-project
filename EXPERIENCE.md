@@ -1,5 +1,7 @@
 # Documentation de l'Expérience JsPsych
 
+> ⚠️ **Cette expérience est conçue pour être réalisée sur ordinateur.** Elle n'est pas compatible avec les smartphones ou tablettes. Utiliser un navigateur récent (Chrome, Firefox, Safari, Edge) sur ordinateur de bureau ou portable.
+
 ## **Objectif de l'étude**
 
 Cette recherche vise à étudier la manière dont les étudiant·e·s évaluent différentes affirmations liées à la santé, notamment lorsqu'elles reposent sur des croyances non validées scientifiquement.
@@ -7,7 +9,8 @@ Cette recherche vise à étudier la manière dont les étudiant·e·s évaluent 
 **Objectifs spécifiques :**
 
 - Mesurer le niveau d'adhésion à certaines affirmations pseudo-scientifiques
-- Analyser l'influence du cursus universitaire et de l'avancement dans les études
+- Analyser l'influence du cursus universitaire et de l'avancement dans les études sur ce niveau d'adhésion
+- Analyser l'influence du niveau de formation méthodologique sur ce niveau d'adhésion
 - Étudier l'effet de l'influence sociale sur les jugements individuels
 
 ## **Conditions expérimentales**
@@ -105,7 +108,7 @@ Le participant pense être connecté à d'autres participants et voit leurs rép
 
 **Mode GROUP :**
 
-- **Affichage des "autres participants"** :Bloc affiché en bas à gauche avec les 5 noms
+- **Affichage des "autres participants"** :Bloc affiché en bas au centre avec les 5 noms
 - Après 1,5 secondes, les scores commencent à s'afficher progressivement
 - Délais aléatoires sur 12 secondes pour simuler le réalisme
 - Affichage de la moyenne en temps réel
